@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"
-     xmlns:gx="http://www.google.com/kml/ext/2.2"
-     xmlns:kml="http://www.opengis.net/kml/2.2"
+<kml xmlns="http://www.opengis.net/kml/2.2" 
+     xmlns:gx="http://www.google.com/kml/ext/2.2" 
+     xmlns:kml="http://www.opengis.net/kml/2.2" 
      xmlns:atom="http://www.w3.org/2005/Atom">
   <Document>
     <name>House Model</name>
-    <description>A 3D house model using COLLADA</description>
+    <description>A 3D model of a house displayed in Google Earth</description>
     
-    <!-- Placemark for 3D Model -->
+    <!-- Style for the 3D model -->
+    <Style id="modelStyle">
+      <IconStyle>
+        <scale>4.0</scale>
+      </IconStyle>
+    </Style>
+
     <Placemark>
       <name>3D House</name>
-      <description>This is a house model rendered using COLLADA (.dae)</description>
+      <description>This is a 3D model of a house from a COLLADA file.</description>
+      <styleUrl>#modelStyle</styleUrl>
       <Model>
-        <!-- Link to the COLLADA (.dae) file -->
+        <!-- Link to the COLLADA .dae file -->
         <Link>
-          <href>https://raw.githubusercontent.com/vishal28d/task5/refs/heads/main/assets/house.dae</href>
+          <href>https://raw.githubusercontent.com/vishal28d/lg_resources/refs/heads/main/House_Model_.dae
+	</href>
         </Link>
-        <!-- Position of the model -->
+        
+        <!-- Model location -->
         <Location>
-          <longitude>74.93528</longitude> <!-- Longitude -->
-          <latitude>28.72056</latitude>   <!-- Latitude -->
-          <altitude>0</altitude>          <!-- Altitude -->
+          <longitude>77.2090</longitude> <!-- Update with desired longitude -->
+          <latitude>28.6139</latitude>  <!-- Update with desired latitude -->
+          <altitude>0</altitude>
         </Location>
+
         <!-- Orientation of the model -->
         <Orientation>
-          <heading>0</heading>            <!-- Rotation in degrees -->
-          <tilt>0</tilt>                  <!-- Tilt of the model -->
-          <roll>0</roll>                  <!-- Roll of the model -->
+          <heading>0</heading>
+          <tilt>0</tilt>
+          <roll>0</roll>
         </Orientation>
+
         <!-- Scale of the model -->
         <Scale>
-          <x>1</x>                        <!-- Scale factor for the X-axis -->
-          <y>1</y>                        <!-- Scale factor for the Y-axis -->
-          <z>1</z>                        <!-- Scale factor for the Z-axis -->
+          <x>3.0</x>
+          <y>3.0</y>
+          <z>3.0</z>
         </Scale>
+
         <!-- Altitude mode -->
         <altitudeMode>relativeToGround</altitudeMode>
       </Model>
